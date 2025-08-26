@@ -1,0 +1,44 @@
+{
+  "name": "EmailRule",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da regra"
+    },
+    "filter_type": {
+      "type": "string",
+      "enum": [
+        "sender",
+        "subject",
+        "content",
+        "priority"
+      ],
+      "description": "Tipo de filtro"
+    },
+    "filter_value": {
+      "type": "string",
+      "description": "Valor do filtro (email, palavra-chave, etc)"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "organize",
+        "priority",
+        "spam",
+        "unsubscribe",
+        "auto_reply"
+      ],
+      "description": "Ação a ser executada"
+    },
+    "target_folder": {
+      "type": "string",
+      "description": "Pasta de destino (se aplicável)"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Se a regra está ativa"
+    },
+    "priority_level": {
+      "type": "string",

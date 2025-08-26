@@ -1,0 +1,44 @@
+{
+  "name": "ResponseTemplate",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do template"
+    },
+    "trigger_keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Palavras-chave que ativam este template"
+    },
+    "subject_template": {
+      "type": "string",
+      "description": "Template do assunto da resposta"
+    },
+    "body_template": {
+      "type": "string",
+      "description": "Template do corpo da resposta"
+    },
+    "sender_filter": {
+      "type": "string",
+      "description": "Filtro de remetente (opcional)"
+    },
+    "priority_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium",
+      "description": "Prioridade para usar este template"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Se o template está ativo"
+    },
+    "delay_minutes": {

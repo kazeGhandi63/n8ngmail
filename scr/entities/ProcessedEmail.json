@@ -1,0 +1,44 @@
+{
+  "name": "ProcessedEmail",
+  "type": "object",
+  "properties": {
+    "sender": {
+      "type": "string",
+      "description": "Email do remetente"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Nome do remetente"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Assunto do email"
+    },
+    "content_preview": {
+      "type": "string",
+      "description": "Preview do conteúdo"
+    },
+    "received_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data de recebimento"
+    },
+    "processed_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data de processamento"
+    },
+    "action_taken": {
+      "type": "string",
+      "enum": [
+        "organized",
+        "prioritized",
+        "deleted",
+        "auto_replied",
+        "unsubscribed"
+      ],
+      "description": "Ação executada"
+    },
+    "target_folder": {
+      "type": "string",
+      "description": "Pasta de destino"
